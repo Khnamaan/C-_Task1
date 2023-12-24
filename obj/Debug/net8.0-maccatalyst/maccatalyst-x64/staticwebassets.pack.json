@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\HP\\source\\repos\\ProjectUNODesktop\\ProjectUNODesktop\\obj\\Debug\\net8.0-maccatalyst\\maccatalyst-x64\\scopedcss\\bundle\\ProjectUNODesktop.styles.css",
+      "PackagePath": "staticwebassets\\ProjectUNODesktop.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\source\\repos\\ProjectUNODesktop\\ProjectUNODesktop\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\source\\repos\\ProjectUNODesktop\\ProjectUNODesktop\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\source\\repos\\ProjectUNODesktop\\ProjectUNODesktop\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\source\\repos\\ProjectUNODesktop\\ProjectUNODesktop\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\source\\repos\\ProjectUNODesktop\\ProjectUNODesktop\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-maccatalyst\\maccatalyst-x64\\staticwebassets\\msbuild.ProjectUNODesktop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-maccatalyst\\maccatalyst-x64\\staticwebassets\\msbuild.build.ProjectUNODesktop.props",
+      "PackagePath": "build\\ProjectUNODesktop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-maccatalyst\\maccatalyst-x64\\staticwebassets\\msbuild.buildMultiTargeting.ProjectUNODesktop.props",
+      "PackagePath": "buildMultiTargeting\\ProjectUNODesktop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-maccatalyst\\maccatalyst-x64\\staticwebassets\\msbuild.buildTransitive.ProjectUNODesktop.props",
+      "PackagePath": "buildTransitive\\ProjectUNODesktop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

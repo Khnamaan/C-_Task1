@@ -1,0 +1,80 @@
+﻿@page "/demo"
+@using ProjectUNODesktop.NewFolder
+
+<h3>demoRazor</h3>
+<EditForm Model = "@formModel">
+    <div>
+        <label for="task" class="form-label"> Task </label>
+        <input type="text" class="form-control" @bind-value ="formModel.Task">
+        <button class="btn btn-primary" @onclick ="AddText">  Save </button>
+    </div>
+</EditForm>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th> Task </th>
+                <th> IsCompleted </th>
+                <th> Actions </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var task in formModels)
+            {
+                <tr>
+                    <td> @task.ID </td>
+                    <td> @task.Task</td>
+                    <td> @task.IsCompleted </td>
+                    <td> 
+                        @if (!task.IsCompleted)
+                        {
+                            <button class="btn btn-sm btn-warning" @onclick="() => CompleteTask(task.ID)"> Complete </button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-sm btn-warning" @onclick="() => DoneCompleteTask(task.ID)"> Remove </button>
+                            <button class="btn btn-sm btn-warning" @onclick="() => RedoTask(task.ID)"> Redo </button>
+
+                        }
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private List<FormModel> formModels = new();
+    private FormModel formModel = new();
+
+    private void AddText()
+    {
+        formModel.ID = formModels.Count + 1;
+        formModels.Add(formModel);
+        formModel = new();
+    }
+
+    private void CompleteTask(int taskID)
+    {
+        var toComplete = formModels.Find(x => x.ID == taskID);
+        if (toComplete != null)
+            toComplete.IsCompleted = true;
+    }
+    private void DoneCompleteTask(int taskID)
+    {
+        var toDONEComplete = formModels.Find(x => x.ID == taskID);
+        if (toDONEComplete != null && toDONEComplete.IsCompleted)
+            formModels.Remove(toDONEComplete);
+    }
+    private void RedoTask(int taskID)
+    {
+        var toComplete = formModels.Find(x => x.ID == taskID);
+        if (toComplete != null)
+            toComplete.IsCompleted = false;
+    }
+
+}
+
